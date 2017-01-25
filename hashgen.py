@@ -20,7 +20,7 @@ sqlorigins = {'MyXero.dbo.Organisation': 'SubscribedOrgs',
 				'Payroll.dbo.Salary':'SalariedEmployees' ,
 				'Payroll.dbo.AntonysSalary':'UnderpaidEmployees' }
 
-# generate 10 sample dataset names
+# generate a few sample dataset names
 for sample in sqlorigins:
 	origintype='sql'
 	
