@@ -1,0 +1,5 @@
+/c4cb/sql/MyXero.dbo.Organisation/2017-1-26-11-46/SubscribedOrgs.1-10000
+/79b2/sql/MyXero.dbo.OrganisationDescription/2017-1-26-11-46/OrganisationDetail.1-10000
+/ca5d/sql/Shard.dbo.Shardmonkey/2017-1-26-11-46/OrgsByShard.1-10000
+/31d6/sql/Payroll.dbo.Salary/2017-1-26-11-46/SalariedEmployees.1-10000
+/8cba/sql/Payroll.dbo.AntonysSalary/2017-1-26-11-46/UnderpaidEmployees.1-10000
