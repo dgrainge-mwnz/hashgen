@@ -5,6 +5,7 @@
 # 
 # /[hash]/[origin class]-[origin id]/[year]-[month]-[day]-[hour]-[minute]/[dataset name]{.[start]}{-[extent}}
 #
+# hash is a random 4 digit hex number
 # origin class is a single character identifying type of source
 # 	s means sql
 # origin is a dotted hierarchical name describing the datasource
