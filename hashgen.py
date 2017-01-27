@@ -3,12 +3,16 @@
 # Dave Grainger / @elusivepeak January 2017
 # Generates sample S3 object keys for dataset names in the S3 in-bucket
 # 
-# /[4 digit hash]/[origin type]-[origin id]/[year]-[month]-[day]-[hour]-[minute]/[dataset name]{.[start]}{-[extent}}
+# /[hash]/[origin class]-[origin id]/[year]-[month]-[day]-[hour]-[minute]/[dataset name]{.[start]}{-[extent}}
 #
+# origin class is a single character identifying type of source
+# 	s means sql
 # origin is a dotted hierarchical name describing the datasource
+# y,m,d,h,m are UTC time the representations extracted (or else time of extract) 
 #
 # Example for a sql origin type (c.f. DataVault)
 # 	MyXero.dbo.Organisation   (database.schema.collection)
+#
 
 import random    	# for randint() function
 import datetime		# for 'now'
@@ -22,11 +26,11 @@ sqlorigins = {'MyXero.dbo.Organisation': 'SubscribedOrgs',
 
 # generate a few sample dataset names
 for sample in sqlorigins:
-	origintype='sql'
+	oclass='s'
 	
 	rand = random.randint(1,2**16)		# generate a 16-bit random integer
 
 	et = datetime.datetime.now()		# take now as time of dataset extract
 	edt = str(f'{et.year}-{et.month}-{et.day}-{et.hour}-{et.minute}')
 
-	print(f'/{rand:04x}/sql/{sample}/{edt}/{sqlorigins[sample]}.1-10000')
+	print(f'/{rand:04x}/{oclass}/{sample}/{edt}/{sqlorigins[sample]}.1-100000')
